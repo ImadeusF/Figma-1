@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --color-bg: #d9d9d9;
+  --color-link: #5e607a;
+  --color-h1: #00001a; /* Title blog */
+  --color-h2: #e9aa52; /* Title New */
+  --color-h3: #fffdfa; /* Subtitle Title New */
+  --color-p: #5e607a;
+  --color-number-p: #c5c6ce; /* Article number */
+  --color-article: #00001a; /* Article title */
+  --color-btn: #f15d51;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Inter";
+  max-width: 1110px;
+  min-width: 350px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.container {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 45px;
+  height: 28px;
+}
+
+/* MOBILE MENU - BURGER */
+
+.header__burger {
+  display: block;
+  cursor: pointer;
+}
+
+.header__burger svg {
+  stroke: #00001a;
+  width: 40px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 30vh;
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.header__nav.open {
+  display: flex;
+  animation: transformMenu 300ms ease-in-out forwards;
+}
+
+@keyframes transformMenu {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: initial;
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__link a {
+  color: var(--color-link);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.header__burger {
+  display: block;
+}
+
+.header__nav__close {
+  display: block;
+  cursor: pointer;
+}
+
+.header__nav__close svg {
+  stroke: #00001a;
+  width: 40px;
+  height: 17px;
+  position: absolute;
+  top: 33px;
+  right: 33px;
+}
+
+.overlay-menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 16;
+  width: 90%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.overlay-menu-mobile.open {
+  display: block;
+}
+
+/* BLOC PRINCIPAL MAIN */
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr; /* Affichage en ligne */
+  grid-template-rows: auto auto auto auto; /* Les lignes s'ajustent automatiquement */
+  grid-template-areas:
+    "zone1"
+    "zone3"
+    "zone4"
+    "zone2";
+  align-items: center;
+  gap: 30px;
+  padding: 0px 16px 30px 0px;
+}
+
+.zone1 {
+  grid-area: zone1;
+}
+.zone3 {
+  grid-area: zone3;
+}
+
+.zone3 h1 {
+  color: var(--color-h1);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+  text-align: left;
+}
+
+.zone4 {
+  grid-area: zone4;
+}
+
+.zone4 p {
+  color: var(--color-p);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.zone4 .btn {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 4.375px;
+  text-align: left;
+  color: var(--color-h3);
+  background-color: var(--color-btn);
+  width: 185px;
+  height: 48px;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.zone2 {
+  grid-area: zone2;
+  background-color: var(--color-h1);
+  height: 100%;
+  padding: 0px 16px;
+}
+
+.zone2 h2 {
+  color: var(--color-h2);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+}
+
+.zone2 h3 {
+  color: var(--color-h3);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: left;
+}
+
+.zone2 p {
+  color: var(--color-p);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.section__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "zones1"
+    "zones2"
+    "zones3";
+  padding-bottom: 150px;
+  gap: 30px;
+}
+
+.zones1 {
+  grid-area: zones1;
+  display: flex;
+}
+.zones2 {
+  grid-area: zones2;
+  display: flex;
+}
+.zones3 {
+  grid-area: zones3;
+  display: flex;
+}
+
+.section__image {
+  height: 127px;
+  width: 100px;
+}
+
+.section__infos p {
+  color: var(--color-number-p);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.section__infos p:last-of-type {
+  color: var(--color-p);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.section__infos {
+  color: var(--color-h1);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: left;
+  padding: 0px 16px;
+}
+.section__infos h4 {
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+/* MENU IF NOT MOBILE */
+@media (min-width: 350px) {
+  .container {
+    max-width: 1110px;
+    height: 178px;
+  }
+
+  .header__logo {
+    width: 64px;
+    height: 40px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; /* Supprimer la position fixe */
+    top: auto; /* Supprimer la position top */
+    right: auto; /* Supprimer la position right */
+    width: auto; /* Supprimer la largeur fixe */
+    height: auto; /* Supprimer la hauteur fixe */
+  }
+
+  .header__menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__link a {
+    margin-right: 41px;
+  }
+
+  .header__nav__close {
+    display: none;
+  }
+
+  /* BLOC MAIN */
+  .main__container {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 300px 211px;
+    grid-template-areas:
+      "zone1 zone1 zone2"
+      "zone3 zone4 zone2";
+    gap: 30px;
+  }
+  .zone3 h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 56px;
+  }
+  .section__container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 129px;
+    grid-template-areas: "zones1 zones2 zones3";
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1111px) {
+  .header .header__link:last-of-type a {
+    margin-right: initial;
+  }
+}

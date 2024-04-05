@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <nav class="header__nav">
+          <div class="header__nav__close" onclick="closeMenuMobile()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+
+          <ul class="header__menu">
+            <li class="header__link"><a href="#">Home</a></li>
+            <li class="header__link"><a href="#">New</a></li>
+            <li class="header__link"><a href="#">Popular</a></li>
+            <li class="header__link"><a href="#">Trending</a></li>
+            <li class="header__link"><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+        <div class="header__burger" onclick="openMenuMobile()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <div class="zone1">
+          <picture>
+            <source
+              media="(max-width: 350px)"
+              srcset="images/main1-mobile.png"
+            />
+            <source
+              media="(min-width: 349px)"
+              srcset="images/main1-screen.png"
+            />
+            <img src="images/main1-screen.png" alt="main1" />
+          </picture>
+        </div>
+        <div class="zone2">
+          <h2>New</h2>
+          <article>
+            <h3>Hydrogen VS Electric</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            <hr />
+          </article>
+          <article>
+            <h3>The Downsides of AI</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+            <hr />
+          </article>
+          <article>
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </div>
+        <div class="zone3"><h1>The Bright Future of Web 3.0?</h1></div>
+        <div class="zone4">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="btn">read more</button>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="section__container">
+        <div class="zones1">
+          <div class="section__image">
+            <img src="images/sectionimage1.svg" />
+          </div>
+          <div class="section__infos">
+            <p>01</p>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="zones2">
+          <div class="section__image">
+            <img src="images/sectionimage2.svg" />
+          </div>
+          <div class="section__infos">
+            <p>02</p>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="zones3">
+          <div class="section__image">
+            <img src="images/sectionimage3.svg" />
+          </div>
+          <div class="section__infos">
+            <p>03</p>
+            <h4>The Growth of Gaming</h4>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
