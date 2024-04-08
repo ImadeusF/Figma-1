@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-  --color-bg: #fffdfa;
+  --color-bg: #fbfaff;
   --color-link: #5e607a;
   --color-h1: #00001a; /* Title blog */
   --color-h2: #e9aa52; /* Title New */
@@ -282,7 +282,7 @@ hr {
 }
 
 /* MENU IF NOT MOBILE */
-@media (min-width: 350px) {
+@media (min-width: 768px) {
   .container {
     max-width: 1110px;
     height: 178px;
@@ -340,9 +340,6 @@ hr {
 
   .zone1 img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
   }
 
   .zone3 h1 {
