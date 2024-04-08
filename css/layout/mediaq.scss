@@ -1,0 +1,77 @@
+/* MENU IF NOT MOBILE */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1110px;
+    height: 178px;
+  }
+
+  .header {
+    &__logo {
+      width: 64px;
+      height: 40px;
+    }
+    &__burger {
+      display: none;
+    }
+    &__nav {
+      display: block;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative; /* Supprimer la position fixe */
+      top: auto; /* Supprimer la position top */
+      right: auto; /* Supprimer la position right */
+      width: auto; /* Supprimer la largeur fixe */
+      height: auto; /* Supprimer la hauteur fixe */
+    }
+    &__menu {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &__link a {
+      margin-right: 41px;
+    }
+    &__nav__close {
+      display: none;
+    }
+  }
+
+  /* BLOC MAIN */
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "zone1 zone1 zone2"
+      "zone3 zone4 zone2";
+    padding: 0px 0px 30px 0px;
+    gap: 30px;
+  }
+}
+.section {
+  &__image {
+    height: 127px;
+    width: 100px;
+  }
+  .zone3 h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 56px;
+    margin: 0;
+    padding: 0;
+  }
+  &__container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 129px;
+    grid-template-areas: "zones1 zones2 zones3";
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1111px) {
+  .header .header__link:last-of-type a {
+    margin-right: initial;
+  }
+}

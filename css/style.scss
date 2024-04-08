@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "variables";
+@import "layout/header";
+@import "layout/main";
+@import "layout/mediaq";
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Inter";
+  max-width: 1110px;
+  min-width: 350px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.container {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
