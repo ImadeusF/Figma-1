@@ -23,6 +23,7 @@ body {
 
 .container {
   height: 78px;
+  padding-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,9 +43,10 @@ body {
 
 .header__burger svg {
   stroke: #00001a;
-  width: 40px;
-  height: 17px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
+  padding-top: 25px;
 }
 
 .header__nav {
@@ -208,7 +210,7 @@ body {
 }
 
 .zone2 p {
-  color: var(--color-p);
+  color: var(--color-number-p);
   font-size: 15px;
   font-weight: 400;
   line-height: 26px;
